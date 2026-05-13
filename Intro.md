@@ -1,22 +1,59 @@
-#include <iostream> //---> header files: contains functions for basic input and output operations, by including it we can do whole new types of input-output operations
+# Intro to C++
 
-int main(){//--> where main program begins
-    std::cout<< "I like pizza!";//---> std stands for standard, c is for character and out for output, standard character output ---> we are going to print a statement between double quotes, the thing we want to print are preceeded by "<<" and a line of code is terminated by a ";"
+## Header Files
+`#include <iostream>` — gives access to basic input/output operations like `cout`.
 
-    std::cout<< "Its really good!" << std::endl; //---> this and previous line of code will result in printing the statemtent in the same line until and unless they have "endl" or a "\n"
+---
 
+## Program Entry Point
+Every C++ program starts execution from `main()`. 
+- Returns `0` → program ran successfully
+- Returns `1` → something went wrong
 
-![endl example](assets\images\endl.png)
-    //single line comment
+---
 
-    /*
-        this 
-            is
-                multi
-            line
-        comment
-    */
+## Output — `std::cout`
+- `std` → standard library
+- `c` → character
+- `out` → output
+- `<<` → insertion operator (precedes what you want to print)
+- `;` → terminates every statement
 
-    std::cout<< "I like spicy food";
-    return 0; //---> if we reached 0 it means everything in this block went well, if we get 1 that means somethign went wrong above it
+```cpp
+std::cout << "I like pizza!";
+std::cout << "Its really good!" << std::endl;
+```
+
+### `endl` vs `\n`
+Both move to a new line, but `endl` also **flushes the buffer** (slightly slower).
+
+![endl example](../assets/images/endl.png)
+
+---
+
+## Comments
+
+```cpp
+// This is a single line comment
+
+/*
+    This is
+    a multi-line
+    comment
+*/
+```
+
+---
+
+## Full Example
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "I like pizza!";
+    std::cout << "Its really good!" << std::endl;
+    std::cout << "I like spicy food";
+    return 0;
 }
+```
